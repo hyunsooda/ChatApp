@@ -1,0 +1,61 @@
+
+<!-- overflow : auto 로 태그가 많이쌓였을경우 줄을 만들어준다. -->
+<style>
+  .panel-body {
+    overflow: auto;
+  }
+</style>
+
+
+<div class="row" >
+  <div class="col-md-2">
+    <div class="panel panel-default" >
+      <div class="panel-heading" style="background-color: #c9e2b3 ">
+        <p> 채팅방 목록 <p/>
+      </div>
+      <div class="panel-body">
+        <div ng-repeat="room in roomList   " ng-click="joinRoom(room);">
+          {{room}}
+        </div>
+       <!-- 1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+      <div class="panel panel-default" >
+        <div class="panel-heading" style="background-color: #c9e2b3 ">
+          <p> <strong>채팅방 ({{ CurrentRoom }}) </strong> </p>
+        </div>
+        <div class="panel-body" >
+          <div style=" width : 690px; height : 370px;">  <!-- 실제 메세지가 보일곳 -->
+         <!--1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/> -->
+          <div ng-repeat="msg in EntireMsg.outputMsg">
+            {{msg}}
+          </div>
+          </div>
+        </div>
+        </div>
+    <input type="text" class="form-control" ng-model="userMessage" ng-keyup="msgRequest(userMessage,$event.keyCode);"> <br/>
+    <div system-msg  attr="EntireMsg.SystemMsg" ng-repeat="att in  EntireMsg.SystemMsg" class="ani-repeat "  > {{ att }} </div> <!-- ng-repeat에 class가 달려있는것에 유의하자 -->
+  </div>
+
+
+    <div class="col-md-2">
+      <div class="panel panel-default" >
+        <div class="panel-heading" style="background-color: #c9e2b3 ">
+          <p> 현재채팅방 사람들 <p/>
+        </div>
+        <div class="panel-body">
+          <div ng-repeat="nickName in nickNames    ">
+            {{nickName}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+

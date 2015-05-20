@@ -1,0 +1,45 @@
+<!-- 회원가입 -->
+<div class="row" >
+  <div class="col-md-6" ng-if="viewFunc()">
+    <div class="panel panel-default" >
+      <div class="panel-heading" style="background-color: #c9e2b3 ">
+        <p> 처음이신가요 ? ㅎㅎ</p>
+      </div>
+      <div class="panel-body">
+        <a href="#/signup">
+          <img src="singin.png" style="width:100%" >
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 채팅방입장 -->
+  <div class="col-md-12" ng-if="!viewFunc()">
+    <div class="panel panel-default" >
+      <div class="panel-heading" style="background-color: #954121 ">
+        <h2 style="color: #219161"> GoGo ! </h2>
+      </div>
+      <div class="panel-body">
+        <a href="#/chat">
+          <img src="ChatRoom.png" style="width:100%"  >
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 로그인 -->
+  <div class="col-md-6" ng-if="viewFunc()" >
+    <div class="panel panel-default" >
+      <div class="panel-heading" style="background-color: #b3d4fc ">
+        <p> 반갑습니다 ^^</p>
+      </div>
+      <div class="panel-body" >
+        <a href="#/login">
+          <img src="login.PNG" style="width:90%" >
+        </a>
+    </div>
+  </div>
+</div>
+
+
+  </div>

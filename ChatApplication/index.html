@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="Hyunsoo">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!-- <link rel="stylesheet" href="app/styles/main.css"> -->
+    <link rel="stylesheet" href="app/styles/AngularAnimation.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="mainCtrl"> <!-- ng-app="chatAppApp"-->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+     <a href="#/main"> <div class="navbar-brand"> WebChat in Thinkhack</div>  </a>
+    </div>
+    <div class="navbar-inner">
+      <p class="navbar-left">
+        {{me}}
+      </p>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <ng-view></ng-view>
+  </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+  <!--  <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular/angular-animate.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="/socket.io/socket.io.js"></script>
+
+      <script src="app/angularHead.js"></script>
+      <script src="app/scripts/service/restfulSVC.js"></script>
+      <script src="app/scripts/ctrl/login_ctrl.js"></script>
+      <script src="app/scripts/ctrl/signup_ctrl.js"></script>
+      <script src="app/scripts/chat.js"></script>
+      <script src="app/scripts/ctrl/chat_ctrl.js"></script>
+      <!--<script src="app/scripts/chat_ui,js.js"></script>-->
+        <!-- endbuild -->
+</body>
+</html>

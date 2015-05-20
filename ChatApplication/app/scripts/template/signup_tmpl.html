@@ -1,0 +1,29 @@
+<style>
+  .form-control {
+    width:30%
+  }
+</style>
+
+<form role="form" name="userForm">
+  <div class="form-group">
+    <label for="ID">ID</label>
+    <input type="text" name="ID" class="form-control" ng-model="user.ID"  ng-minlength="5" ng-maxlength="13" >
+    <p class="text-danger" ng-show="userForm.ID.$invalid" > 아이디는5글자이상 13자이하로 해주세요</p>
+
+  </div>
+
+  <div class="form-group">
+    <label for="PSWD">PASSWORD</label>
+    <input type="password" name="PSWD" class="form-control" ng-model="user.PSWD"   ng-minlength="5" ng-maxlength="13">
+    <p class="text-danger" ng-show="userForm.PSWD.$invalid" > 비밀번호는 13자이하로 해주세요</p>
+  </div>
+
+  <div class="form-group">
+    <label for="PSWD2">PASSWORD 확인</label>
+    <input type="password" name="PSWD2" class="form-control" ng-model="user.PSWD2"   ng-minlength="5" ng-maxlength="13">
+    <p class="text-danger" ng-show="userForm.PSWD2.$invalid" > 비밀번호는 13자이하로 해주세요</p>
+  </div>
+
+  <button class="btn btn-default" type="button" ng-click="sign(user) " > <span class="glyphicon glyphicon-plus"></span> 가입하기 </button>
+
+</form>
